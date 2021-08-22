@@ -1,0 +1,16 @@
+include ':app', ':uilib', ':bl', ':common' // ':interfaces'
+rootProject.name='ItzikTestMovieApplication'
+
+/*
+
+ insert local modules from another project
+
+  include 'name module'
+  project ('name module').projectDir = new File('path module')
+
+
+  from gradle  file to apply another gradle
+  apply from: '../../gradle path'
+  ../ - back path
+
+  **/

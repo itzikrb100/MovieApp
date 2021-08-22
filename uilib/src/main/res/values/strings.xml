@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Movies</string>
+    <string name="movie_bundle_extra">moviedata_extra</string>
+</resources>

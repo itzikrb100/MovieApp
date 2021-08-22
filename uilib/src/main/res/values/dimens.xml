@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="poster_w">150dp</dimen>
+    <dimen name="poster_h">250dp</dimen>
+    <dimen name="text_h">80dp</dimen>
+    <dimen name="text_s">20dp</dimen>
+</resources>

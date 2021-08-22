@@ -1,0 +1,57 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion targetSdk
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.example.itziktestapplication"
+        minSdkVersion minSdk
+        targetSdkVersion targetSdk
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dataBinding {
+        enabled true
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+
+}
+
+//configurations {
+//    myConfig
+//}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation project(':uilib')
+    implementation project(':bl')
+
+
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+}
+
+//task copyLibs(type: Copy) {
+//    // Now you can use 'myConfig' instead of 'implementation' or 'compile'
+//    println("### root project = $project.rootDir")
+//    from configurations.myConfig //from {configurations.myConfig.collect { it.isDirectory() ? it : zipTree(it) }}
+//    into "$project.rootDir/path"
+//}
